@@ -50,7 +50,6 @@
     quick-tap-ms = <100>;
     global-quick-tap;
     flavor = "tap-preferred";
-    tapping-term-ms = <170>;
 };
 
 / {
@@ -216,19 +215,19 @@
         ColemakDH {
             label = "BASE";
             bindings = <
-           &kp Q        &kp W        &kp F         &kp P         &kp B        &kp J    &kp L         &kp U         &kp Y             &kp SEMICOLON
-           &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T  &kp G        &kp M    &hmr RSHFT N  &hmr RCTRL E  &hmr RIGHT_ALT I  &hmr RGUI O
-&escOrTab  &kp Z        &kp X        &kp C         &kp D         &kp V        &kp K    &kp H         &kp COMMA     &kp DOT           &comment_or 0 SLASH  &mt DOUBLE_QUOTES SQT
-                                     &mo 2         &lt 1 ESC     &kp SPACE    &kp RET  &lt 3 SPACE   &mo 2
+           &kp Q        &kp W        &kp F              &kp P            &kp B      &kp J    &kp L         &kp U               &kp Y             &kp SEMICOLON
+           &hml LGUI A  &hml LALT R  &hml LEFT_SHIFT S  &hml LCTRL T     &kp G      &kp M    &hmr RCTRL N  &hmr RIGHT_SHIFT E  &hmr RIGHT_ALT I  &hmr RGUI O
+&escOrTab  &kp Z        &kp X        &kp C              &kp D            &kp V      &kp K    &kp H         &kp COMMA           &kp DOT           &comment_or 0 SLASH  &mt DOUBLE_QUOTES SQT
+                                     &mo 2              &lt 1 BACKSPACE  &kp DEL    &kp RET  &lt 3 SPACE   &mo 2
             >;
         };
 
         Navigation {
             label = "Navigation";
             bindings = <
-        &trans  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &trans  &trans    &none   &kp HOME      &kp PAGE_UP   &kp PAGE_DOWN   &kt END
-        &trans  &trans                &trans                &trans  &trans    &none   &kp LEFT      &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
-&trans  &trans  &trans                &trans                &trans  &trans    &none   &kp LC(LEFT)  &none         &none           &kt LC(RIGHT_ARROW)  &kp CAPSLOCK
+        &trans  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &trans  &trans    &none   &kp HOME      &kp PAGE_UP     &kp PAGE_DOWN  &kt END
+        &trans  &trans                &trans                &trans  &trans    &none   &kp LEFT      &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW
+&trans  &trans  &trans                &trans                &trans  &trans    &none   &kp LC(LEFT)  &none           &none          &kt LC(RIGHT_ARROW)  &kp CAPSLOCK
                                       &trans                &trans  &trans    &trans  &trans        &trans
             >;
         };
@@ -236,10 +235,10 @@
         digits {
             label = "Digits";
             bindings = <
-        &kp PIPE                    &kp DOLLAR             &kp LEFT_BRACE               &kp RIGHT_BRACE                 &press_two_keys GREATER_THAN EQUAL    &kp PLUS   &kp N7  &kp N8  &kp N9  &kp SEMICOLON
-        &hml LEFT_META EXCLAMATION  &hml LEFT_ALT AT_SIGN  &hml LCTRL LEFT_PARENTHESIS  &hml LSHFT RIGHT_PARENTHESIS    &press_two_keys MINUS GREATER_THAN    &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY
-&trans  &kp AMPERSAND               &kp LCTRL              &mt LESS_THAN LEFT_BRACKET   &mt GREATER_THAN RIGHT_BRACKET  &press_two_keys LESS_THAN EQUAL       &kp MINUS  &kp N1  &kp N2  &kp N3  &kp PERIOD       &kp SLASH
-                                                           &trans                       &trans                          &trans                                &trans     &kp N0  &trans
+        &mt PIPE BSLH               &mt TILDE DOLLAR       &mt UNDER LEFT_BRACE          &kp RIGHT_BRACE                 &press_two_keys GREATER_THAN EQUAL    &kp KP_PLUS   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp SEMICOLON
+        &hml LEFT_META EXCLAMATION  &hml LEFT_ALT AT_SIGN  &hml LSHIFT LEFT_PARENTHESIS  &hml LCTRL RIGHT_PARENTHESIS    &press_two_keys MINUS GREATER_THAN    &kp KP_EQUAL  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_ASTERISK
+&trans  &mt AMPERSAND PERCENT       &mt GRAVE CARET        &mt LEFT_BRACKET LESS_THAN    &mt RIGHT_BRACKET GREATER_THAN  &press_two_keys LESS_THAN EQUAL       &kp KP_MINUS  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT       &kp KP_DIVIDE
+                                                           &trans                        &trans                          &trans                                &trans        &kp KP_N0  &trans
             >;
         };
 
