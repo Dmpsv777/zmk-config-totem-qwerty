@@ -218,7 +218,7 @@
             bindings = <
            &kp Q        &kp W        &kp F              &kp P            &kp B      &kp J    &kp L         &kp U               &kp Y             &kp SEMICOLON
            &hml LGUI A  &hml LALT R  &hml LEFT_SHIFT S  &hml LCTRL T     &kp G      &kp M    &hmr RCTRL N  &hmr RIGHT_SHIFT E  &hmr RIGHT_ALT I  &hmr RGUI O
-&escOrTab  &kp Z        &kp X        &kp C              &kp D            &kp V      &kp K    &kp H         &kp COMMA           &kp DOT           &comment_or 0 SLASH  &mt DOUBLE_QUOTES SQT
+&escOrTab  &kp Z        &kp X        &kp C              &kp D            &kp V      &kp K    &kp H         &kp COMMA           &kp DOT           &comment_or 0 SLASH  &mt DQT SQT
                                      &mo 2              &lt 1 BACKSPACE  &kp DEL    &kp RET  &lt 3 SPACE   &mo 2
             >;
         };
@@ -237,8 +237,8 @@
             label = "Digits";
             bindings = <
         &mt PIPE BSLH               &mt TILDE DOLLAR       &mt UNDER LEFT_BRACE          &kp RIGHT_BRACE                 &press_two_keys GREATER_THAN EQUAL    &kp KP_PLUS   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp SEMICOLON
-        &hml LEFT_META EXCLAMATION  &hml LEFT_ALT AT_SIGN  &hml LSHIFT LEFT_PARENTHESIS  &hml LCTRL RIGHT_PARENTHESIS    &press_two_keys MINUS GREATER_THAN    &kp KP_EQUAL  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_ASTERISK
-&trans  &mt AMPERSAND PERCENT       &mt GRAVE CARET        &mt LEFT_BRACKET LESS_THAN    &mt RIGHT_BRACKET GREATER_THAN  &press_two_keys LESS_THAN EQUAL       &kp KP_MINUS  &kp KP_N1  &kp KP_N2  &kp KP_N3  &mt KP_COMMA KP_DOT  &kp KP_DIVIDE
+        &hml LEFT_META EXCLAMATION  &hml LEFT_ALT AT_SIGN  &hml LSHIFT LEFT_PARENTHESIS  &hml LCTRL RIGHT_PARENTHESIS    &press_two_keys MINUS GREATER_THAN    &kp EQUAL     &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_ASTERISK
+&trans  &mt AMPERSAND PERCENT       &mt GRAVE CARET        &mt LEFT_BRACKET LESS_THAN    &mt RIGHT_BRACKET GREATER_THAN  &press_two_keys LESS_THAN EQUAL       &kp KP_MINUS  &kp KP_N1  &kp KP_N2  &kp KP_N3  &mt COMMA KP_DOT  &kp KP_DIVIDE
                                                            &trans                        &trans                          &trans                                &trans        &kp KP_N0  &trans
             >;
         };
