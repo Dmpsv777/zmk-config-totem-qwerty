@@ -63,14 +63,8 @@
             timeout-ms = <70>;
         };
 
-        shift {
-            bindings = <&sk LEFT_SHIFT>;
-            key-positions = <13 12>;
-            timeout-ms = <100>;
-        };
-
         to_digits_layer {
-            bindings = <&to 2>;
+            bindings = <&to 1>;
             key-positions = <32 37>;
         };
 
@@ -82,6 +76,26 @@
         delete {
             bindings = <&kp DEL>;
             key-positions = <17 18>;
+        };
+
+        metaLft {
+            bindings = <&kp LEFT_GUI>;
+            key-positions = <1 2>;
+        };
+
+        metaRht {
+            bindings = <&kp RIGHT_GUI>;
+            key-positions = <7 8>;
+        };
+
+        altLft {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <2 3>;
+        };
+
+        altRht {
+            bindings = <&kp RIGHT_ALT>;
+            key-positions = <7 6>;
         };
     };
 
@@ -117,7 +131,7 @@
                 <&mo MACRO_PLACEHOLDER>;
         };
 
-        press_two_keys: press_two_keys {
+        twoKP: twoKP {
             compatible = "zmk,behavior-macro-two-param";
             wait-ms = <0>;
             tap-ms = <0>;
@@ -200,13 +214,24 @@
             flavor = "tap-preferred";
         };
 
-        escOrTab: escOrTab {
+        escOrTab_XXX: escOrTab_XXX {
             compatible = "zmk,behavior-mod-morph";
-            label = "ESCORTAB";
+            label = "ESCORTAB_XXX";
             bindings = <&kp ESC>, <&kp TAB>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        tLr_hMd: tLr_hMd {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TLR_HMD";
+            bindings = <&kp>, <&mo>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -216,30 +241,30 @@
         ColemakDH {
             label = "BASE";
             bindings = <
-           &kp Q        &kp W        &kp F              &kp P            &kp B      &kp J    &kp L         &kp U               &kp Y             &kp SEMICOLON
-           &hml LGUI A  &hml LALT R  &hml LEFT_SHIFT S  &hml LCTRL T     &kp G      &kp M    &hmr RCTRL N  &hmr RIGHT_SHIFT E  &hmr RIGHT_ALT I  &hmr RGUI O
-&escOrTab  &kp Z        &kp X        &kp C              &kp D            &kp V      &kp K    &kp H         &kp COMMA           &kp DOT           &comment_or 0 SLASH  &mt DQT SQT
-                                     &mo 2              &lt 1 BACKSPACE  &kp DEL    &kp RET  &lt 3 SPACE   &mo 2
-            >;
-        };
-
-        Navigation {
-            label = "Navigation";
-            bindings = <
-        &trans  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &trans  &trans    &none   &kp HOME      &kp PAGE_UP     &kp PAGE_DOWN  &kt END
-        &trans  &trans                &trans                &trans  &trans    &none   &kp LEFT      &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW
-&trans  &trans  &trans                &trans                &trans  &trans    &none   &kp LC(LEFT)  &none           &none          &kt LC(RIGHT_ARROW)  &kp CAPSLOCK
-                                      &trans                &trans  &trans    &trans  &trans        &trans
+             &kp Q  &kp W  &kp F           &kp P            &kp B        &kp J    &kp L      &kp U                   &kp Y    &kp SEMICOLON
+             &kp A  &kp R  &kp S           &kp T            &kp G        &kp M    &kp N      &kp E                   &kp I    &kp O
+&mt ESC TAB  &kp Z  &kp X  &kp C           &kp D            &kp V        &kp K    &kp H      &kp COMMA               &kp DOT  &comment_or 0 SLASH  &mt DQT SQT
+                           &kp LEFT_SHIFT  &lt 2 BACKSPACE  &kp LCTRL    &kp RET  &kp SPACE  &tLr_hMd RIGHT_SHIFT 1
             >;
         };
 
         digits {
             label = "Digits";
             bindings = <
-        &mt PIPE BSLH               &mt TILDE DOLLAR       &mt UNDER LEFT_BRACE          &kp RIGHT_BRACE                 &press_two_keys GREATER_THAN EQUAL    &kp KP_PLUS   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp SEMICOLON
-        &hml LEFT_META EXCLAMATION  &hml LEFT_ALT AT_SIGN  &hml LSHIFT LEFT_PARENTHESIS  &hml LCTRL RIGHT_PARENTHESIS    &press_two_keys MINUS GREATER_THAN    &kp EQUAL     &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_ASTERISK
-&trans  &mt AMPERSAND PERCENT       &mt GRAVE CARET        &mt LEFT_BRACKET LESS_THAN    &mt RIGHT_BRACKET GREATER_THAN  &press_two_keys LESS_THAN EQUAL       &kp KP_MINUS  &kp KP_N1  &kp KP_N2  &kp KP_N3  &mt COMMA KP_DOT  &kp KP_DIVIDE
-                                                           &trans                        &trans                          &trans                                &trans        &kp KP_N0  &trans
+        &mt PIPE BSLH    &mt AMPS DOLLAR    &kp UNDER                        &kp EQUAL                          &twoKP GREATER_THAN EQUAL    &kp KP_PLUS   &kp KP_N7  &kp KP_N8         &kp KP_N9  &kp SEMICOLON
+        &mt POUND EXCL   &kp AT             &mt LEFT_BRACE LEFT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_PARENTHESIS  &twoKP MINUS GREATER_THAN    &kp KP_MINUS  &kp KP_N4  &kp KP_N5         &kp KP_N6  &kp KP_ASTERISK
+&trans  &mt TILDE GRAVE  &mt CARET PERCENT  &mt LEFT_BRACKET LESS_THAN       &mt RIGHT_BRACKET GREATER_THAN     &twoKP LESS_THAN EQUAL       &kp KP_N0     &kp KP_N1  &kp KP_N2         &kp KP_N3  &mt COMMA KP_DOT  &kp KP_DIVIDE
+                                            &tLr_hMd LSHFT 0                 &trans                             &trans                       &trans        &trans     &tLr_hMd RSHFT 2
+            >;
+        };
+
+        Navigation {
+            label = "Navigation";
+            bindings = <
+        &trans  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))   &trans  &trans    &none   &kp HOME      &kp PAGE_UP             &kp PAGE_DOWN  &kt END
+        &trans  &trans                &trans                 &trans  &trans    &none   &kp LEFT      &kp DOWN_ARROW          &kp UP_ARROW   &kp RIGHT_ARROW
+&trans  &trans  &trans                &trans                 &trans  &trans    &none   &kp LC(LEFT)  &none                   &none          &kt LC(RIGHT_ARROW)  &kp CAPSLOCK
+                                      &tLr_hMd LEFT_SHIFT 0  &trans  &trans    &trans  &trans        &tLr_hMd RIGHT_SHIFT 3
             >;
         };
 
@@ -249,7 +274,7 @@
             &kp F1  &kp F2  &kp F3        &kp F4      &kp F5        &kp F6        &kp F7        &kp F8      &kp F9      &kp F10
             &trans  &trans  &trans        &trans      &trans        &kp C_MUTE    &kp C_PP      &trans      &trans      &trans
 &bt BT_CLR  &trans  &trans  &out OUT_TOG  &bt BT_PRV  &bt BT_NXT    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT  &trans   &trans
-                            &trans        &trans      &trans        &trans        &trans        &trans
+                            &to 0         &trans      &trans        &trans        &trans        &trans
             >;
         };
     };
