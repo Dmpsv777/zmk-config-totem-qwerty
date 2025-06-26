@@ -241,10 +241,10 @@
         ColemakDH {
             label = "BASE";
             bindings = <
-             &kp Q  &kp W  &kp F                    &kp P            &kp B        &kp J    &kp L      &kp U                     &kp Y    &kp SEMICOLON
-             &kp A  &kp R  &kp S                    &kp T            &kp G        &kp M    &kp N      &kp E                     &kp I    &kp O
-&mt ESC TAB  &kp Z  &kp X  &kp C                    &kp D            &kp V        &kp K    &kp H      &kp COMMA                 &kp DOT  &comment_or 0 SLASH  &mt DQT SQT
-                           &tLay_hMod LEFT_SHIFT 1  &lt 2 BACKSPACE  &kp LCTRL    &kp RET  &kp SPACE  &tLay_hMod RIGHT_SHIFT 1
+             &kp Q  &kp W  &kp F                    &kp P            &kp B             &kp J    &kp L      &kp U                     &kp Y    &kp SEMICOLON
+             &kp A  &kp R  &kp S                    &kp T            &kp G             &kp M    &kp N      &kp E                     &kp I    &kp O
+&mt ESC TAB  &kp Z  &kp X  &kp C                    &kp D            &kp V             &kp K    &kp H      &kp COMMA                 &kp DOT  &comment_or 0 SLASH  &mt DQT SQT
+                           &tLay_hMod LEFT_SHIFT 1  &lt 2 BACKSPACE  &hml LCTRL DEL    &kp RET  &kp SPACE  &tLay_hMod RIGHT_SHIFT 1
             >;
         };
 
