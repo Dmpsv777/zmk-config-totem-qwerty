@@ -57,43 +57,43 @@
     combos {
         compatible = "zmk,combos";
 
-        backspace {
+        Backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <16 17>;
             timeout-ms = <70>;
         };
 
-        to_digits_layer {
+        to_Digits_layer {
             bindings = <&to 1>;
             key-positions = <32 37>;
         };
 
-        caps-words {
+        capsWord {
             bindings = <&caps_word>;
             key-positions = <11 12 13>;
         };
 
-        delete {
+        Del {
             bindings = <&kp DEL>;
             key-positions = <17 18>;
         };
 
-        metaLft {
+        LMeta {
             bindings = <&kp LEFT_GUI>;
             key-positions = <1 2>;
         };
 
-        metaRht {
+        RMeta {
             bindings = <&kp RIGHT_GUI>;
             key-positions = <7 8>;
         };
 
-        altLft {
+        LAlt {
             bindings = <&kp LEFT_ALT>;
             key-positions = <2 3>;
         };
 
-        altRht {
+        RAlt {
             bindings = <&kp RIGHT_ALT>;
             key-positions = <7 6>;
         };
@@ -170,7 +170,7 @@
             label = "FUN_ARROW_RIGHT";
         };
 
-        comment: comment {
+        slashStar: slashStar {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp FSLH &kp STAR>;
@@ -209,10 +209,10 @@
             hold-trigger-on-release;
         };
 
-        comment_or: comment_or {
+        hSlashStar: hSlashStar {
             compatible = "zmk,behavior-hold-tap";
-            label = "slash_or_comm";
-            bindings = <&comment>, <&kp>;
+            label = "hSlashStar";
+            bindings = <&slashStar>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -246,30 +246,30 @@
         ColemakDH {
             label = "BASE";
             bindings = <
-             &kp Q  &kp W  &kp F                    &kp P            &kp B             &kp J    &kp L      &kp U                     &kp Y    &kp SEMICOLON
-             &kp A  &kp R  &kp S                    &kp T            &kp G             &kp M    &kp N      &kp E                     &kp I    &kp O
-&mt ESC TAB  &kp Z  &kp X  &kp C                    &kp D            &kp V             &kp K    &kp H      &kp COMMA                 &kp DOT  &comment_or 0 SLASH  &mt DQT SQT
-                           &tLay_hMod LEFT_SHIFT 1  &lt 2 BACKSPACE  &hml LCTRL DEL    &kp RET  &kp SPACE  &tLay_hMod RIGHT_SHIFT 1
+             &kp Q  &kp W  &kp F           &kp P            &kp B                      &kp J                &kp L      &kp U      &kp Y    &kp SEMICOLON
+             &kp A  &kp R  &kp S           &kp T            &kp G                      &kp M                &kp N      &kp E      &kp I    &kp O
+&mt ESC TAB  &kp Z  &kp X  &kp C           &kp D            &kp V                      &kp K                &kp H      &kp COMMA  &kp DOT  &hSlashStar 0 SLASH  &mt DQT SQT
+                           &hml LCTRL DEL  &lt 2 BACKSPACE  &tLay_hMod LEFT_SHIFT 1    &tLay_hMod RSHIFT 1  &kp SPACE  &kp ENTER
             >;
         };
 
         digits {
             label = "Digits";
             bindings = <
-        &mt PIPE BSLH    &mt AMPS DOLLAR    &kp UNDER                        &kp EQUAL                          &twoKP GREATER_THAN EQUAL    &kp KP_PLUS   &kp KP_N7  &kp KP_N8           &kp KP_N9  &kp SEMICOLON
-        &mt POUND EXCL   &kp AT             &mt LEFT_BRACE LEFT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_PARENTHESIS  &twoKP MINUS GREATER_THAN    &kp KP_MINUS  &kp KP_N4  &kp KP_N5           &kp KP_N6  &kp KP_ASTERISK
-&trans  &mt TILDE GRAVE  &mt CARET PERCENT  &mt LEFT_BRACKET LESS_THAN       &mt RIGHT_BRACKET GREATER_THAN     &twoKP LESS_THAN EQUAL       &kp KP_N0     &kp KP_N1  &kp KP_N2           &kp KP_N3  &mt COMMA KP_DOT  &kp KP_DIVIDE
-                                            &tLay_hMod LSHFT 2               &trans                             &trans                       &trans        &trans     &tLay_hMod RSHFT 0
+        &mt PIPE BSLH    &mt AMPS DOLLAR    &kp UNDER                        &kp EQUAL                          &twoKP GREATER_THAN EQUAL    &kp KP_PLUS         &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp SEMICOLON
+        &mt POUND EXCL   &kp AT             &mt LEFT_BRACE LEFT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_PARENTHESIS  &twoKP MINUS GREATER_THAN    &kp KP_MINUS        &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_ASTERISK
+&trans  &mt TILDE GRAVE  &mt CARET PERCENT  &mt LEFT_BRACKET LESS_THAN       &mt RIGHT_BRACKET GREATER_THAN     &twoKP LESS_THAN EQUAL       &kp KP_N0           &kp KP_N1  &kp KP_N2  &kp KP_N3  &mt COMMA KP_DOT  &kp KP_DIVIDE
+                                            &trans                           &trans                             &tLay_hMod LSHFT 2           &tLay_hMod RSHFT 0  &trans     &trans
             >;
         };
 
         Navigation {
             label = "Navigation";
             bindings = <
-        &trans  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))     &trans  &trans    &none   &kp HOME      &kp PAGE_DOWN             &kp PAGE_UP   &kp END
-        &trans  &trans                &trans                   &trans  &trans    &none   &kp LEFT      &kp DOWN_ARROW            &kp UP_ARROW  &kp RIGHT_ARROW
-&trans  &trans  &trans                &trans                   &trans  &trans    &none   &kp LC(LEFT)  &none                     &none         &kp LC(RIGHT_ARROW)  &kp CAPSLOCK
-                                      &tLay_hMod LEFT_SHIFT 3  &trans  &trans    &trans  &trans        &tLay_hMod RIGHT_SHIFT 0
+        &trans  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &trans  &trans                &none               &kp HOME      &kp PAGE_DOWN   &kp PAGE_UP   &kp END
+        &trans  &trans                &trans                &trans  &trans                &none               &kp LEFT      &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
+&trans  &trans  &trans                &trans                &trans  &trans                &none               &kp LC(LEFT)  &none           &none         &kp LC(RIGHT_ARROW)  &kp CAPSLOCK
+                                      &trans                &trans  &tLay_hMod LSHFT 3    &tLay_hMod RSHFT 0  &trans        &trans
             >;
         };
 
@@ -279,7 +279,7 @@
             &kp F1  &kp F2  &kp F3        &kp F4      &kp F5        &kp F6        &kp F7        &kp F8      &kp F9      &kp F10
             &trans  &trans  &trans        &trans      &trans        &kp C_MUTE    &kp C_PP      &trans      &trans      &trans
 &bt BT_CLR  &trans  &trans  &out OUT_TOG  &bt BT_PRV  &bt BT_NXT    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT  &trans   &trans
-                            &trans        &trans      &trans        &trans        &trans        &to 0
+                            &trans        &trans      &trans        &to 0         &trans        &trans
             >;
         };
     };
