@@ -246,10 +246,10 @@
         ColemakDH {
             label = "BASE";
             bindings = <
-             &kp Q  &kp W  &kp F           &kp P            &kp B                      &kp J                &kp L      &kp U      &kp Y    &kp SEMICOLON
-             &kp A  &kp R  &kp S           &kp T            &kp G                      &kp M                &kp N      &kp E      &kp I    &kp O
-&mt ESC TAB  &kp Z  &kp X  &kp C           &kp D            &kp V                      &kp K                &kp H      &kp COMMA  &kp DOT  &hSlashStar 0 SLASH  &mt DQT SQT
-                           &hml LCTRL DEL  &lt 2 BACKSPACE  &tLay_hMod LEFT_SHIFT 1    &tLay_hMod RSHIFT 1  &kp SPACE  &kp ENTER
+             &kp Q  &kp W  &kp F           &kp P            &kp B                      &kp J                &kp L      &kp U             &kp Y    &kp SEMICOLON
+             &kp A  &kp R  &kp S           &kp T            &kp G                      &kp M                &kp N      &kp E             &kp I    &kp O
+&mt ESC TAB  &kp Z  &kp X  &kp C           &kp D            &kp V                      &kp K                &kp H      &kp COMMA         &kp DOT  &hSlashStar 0 SLASH  &mt DQT SQT
+                           &hml LCTRL DEL  &lt 2 BACKSPACE  &tLay_hMod LEFT_SHIFT 1    &tLay_hMod RSHIFT 1  &kp SPACE  &hmr RCTRL ENTER
             >;
         };
 
@@ -268,7 +268,7 @@
             bindings = <
         &none  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &none   &none                 &none               &kp HOME      &kp PAGE_DOWN   &kp PAGE_UP   &kp END
         &none  &none                 &none                 &none   &none                 &none               &kp LEFT      &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
-&trans  &none  &none                 &none                 &none   &none                 &none               &kp LC(LEFT)  &none           &none         &kp LC(RIGHT_ARROW)  &kp CAPSLOCK
+&trans  &none  &none                 &none                 &none   &none                 &none               &kp LC(LEFT)  &kp K_COPY      &kp K_PASTE   &kp LC(RIGHT_ARROW)  &kp CAPSLOCK
                                      &trans                &trans  &tLay_hMod LSHFT 3    &tLay_hMod RSHFT 0  &trans        &trans
             >;
         };
