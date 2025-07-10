@@ -16,6 +16,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
 #define NAV  1
@@ -64,7 +65,7 @@
         };
 
         to_Digits_layer {
-            bindings = <&to 1>;
+            bindings = <&to 2>;
             key-positions = <32 37>;
         };
 
@@ -99,7 +100,7 @@
         };
 
         LShift {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&to 2>;
             key-positions = <11 12>;
         };
     };
@@ -266,10 +267,10 @@
         Navigation {
             label = "Navigation";
             bindings = <
-        &none  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &none   &none                 &kp LC(X)           &kp HOME      &kp PAGE_DOWN   &kp PAGE_UP   &kp END
-        &none  &none                 &none                 &none   &none                 &none               &kp LEFT      &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
-&trans  &none  &none                 &none                 &none   &none                 &none               &kp LC(LEFT)  &kp LC(C)       &kp LC(V)     &kp LC(RIGHT_ARROW)  &kp CAPSLOCK
-                                     &trans                &trans  &tLay_hMod LSHFT 3    &tLay_hMod RSHFT 0  &trans        &trans
+        &msc SCRL_LEFT  &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none                 &kp LC(X)           &kp HOME      &kp PAGE_DOWN   &kp PAGE_UP   &kp END
+        &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none                 &kp LC(C)           &kp LEFT      &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
+&trans  &none           &none         &none           &none            &none                 &kp LC(V)           &kp LC(LEFT)  &none           &none         &kp LC(RIGHT_ARROW)  &kp CAPSLOCK
+                                      &mkp MB2        &mkp MB1         &tLay_hMod LSHFT 3    &tLay_hMod RSHFT 0  &trans        &trans
             >;
         };
 
