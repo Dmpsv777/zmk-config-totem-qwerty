@@ -64,8 +64,8 @@
             timeout-ms = <70>;
         };
 
-        to_Digits_layer {
-            bindings = <&to 2>;
+        to_Base_layer {
+            bindings = <&to 0>;
             key-positions = <32 37>;
         };
 
@@ -97,11 +97,6 @@
         RAlt {
             bindings = <&kp RIGHT_ALT>;
             key-positions = <7 6>;
-        };
-
-        LShift {
-            bindings = <&to 2>;
-            key-positions = <11 12>;
         };
     };
 
@@ -247,10 +242,10 @@
         ColemakDH {
             label = "BASE";
             bindings = <
-             &kp Q  &kp W  &kp F           &kp P            &kp B                      &kp J                &kp L      &kp U             &kp Y    &kp SEMICOLON
-             &kp A  &kp R  &kp S           &kp T            &kp G                      &kp M                &kp N      &kp E             &kp I    &kp O
-&mt ESC TAB  &kp Z  &kp X  &kp C           &kp D            &kp V                      &kp K                &kp H      &kp COMMA         &kp DOT  &hSlashStar 0 SLASH  &mt DQT SQT
-                           &hml LCTRL DEL  &lt 2 BACKSPACE  &tLay_hMod LEFT_SHIFT 1    &tLay_hMod RSHIFT 1  &kp SPACE  &hmr RCTRL ENTER
+             &kp Q  &kp W  &kp F           &kp P          &kp B                      &kp J                &kp L      &kp U             &kp Y    &kp SEMICOLON
+             &kp A  &kp R  &kp S           &kp T          &kp G                      &kp M                &kp N      &kp E             &kp I    &kp O
+&mt ESC TAB  &kp Z  &kp X  &kp C           &kp D          &kp V                      &kp K                &kp H      &kp COMMA         &kp DOT  &hSlashStar 0 SLASH  &mt DQT SQT
+                           &hml LCTRL DEL  &kp BACKSPACE  &tLay_hMod LEFT_SHIFT 1    &tLay_hMod RSHIFT 2  &kp SPACE  &hmr RCTRL ENTER
             >;
         };
 
@@ -260,17 +255,17 @@
         &mt PIPE BSLH    &mt AMPS DOLLAR    &kp UNDER                        &kp EQUAL                          &twoKP GREATER_THAN EQUAL    &kp KP_PLUS         &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp SEMICOLON
         &mt POUND EXCL   &kp AT             &mt LEFT_BRACE LEFT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_PARENTHESIS  &twoKP MINUS GREATER_THAN    &kp KP_MINUS        &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_ASTERISK
 &trans  &mt TILDE GRAVE  &mt CARET PERCENT  &mt LEFT_BRACKET LESS_THAN       &mt RIGHT_BRACKET GREATER_THAN     &twoKP LESS_THAN EQUAL       &kp KP_N0           &kp KP_N1  &kp KP_N2  &kp KP_N3  &mt COMMA KP_DOT  &kp KP_DIVIDE
-                                            &trans                           &trans                             &tLay_hMod LSHFT 2           &tLay_hMod RSHFT 0  &trans     &trans
+                                            &trans                           &trans                             &tLay_hMod LSHFT 0           &tLay_hMod RSHFT 0  &trans     &trans
             >;
         };
 
         Navigation {
             label = "Navigation";
             bindings = <
-        &msc SCRL_LEFT  &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none                 &kp LC(X)           &kp HOME      &kp PAGE_DOWN   &kp PAGE_UP   &kp END
-        &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none                 &kp LC(C)           &kp LEFT      &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
-&trans  &none           &none         &none           &none            &none                 &kp LC(V)           &kp LC(LEFT)  &none           &none         &kp LC(RIGHT_ARROW)  &kp CAPSLOCK
-                                      &mkp MB2        &mkp MB1         &tLay_hMod LSHFT 3    &tLay_hMod RSHFT 0  &trans        &trans
+        &none     &none     &msc SCRL_LEFT  &msc SCRL_RIGHT  &none                 &kp LC(X)           &msc SCRL_UP  &msc SCRL_DOWN  &kp PAGE_UP         &kp PAGE_DOWN
+        &mkp MB2  &mkp MB1  &mmv MOVE_LEFT  &mmv MOVE_RIGHT  &none                 &kp LC(C)           &mmv MOVE_UP  &mmv MOVE_DOWN  &none               &none
+&trans  &kp HOME  &kp END   &kp LEFT_ARROW  &kp RIGHT_ARROW  &none                 &kp LC(V)           &kp UP_ARROW  &kp DOWN_ARROW  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp PRINTSCREEN
+                            &trans          &trans           &tLay_hMod LSHFT 3    &tLay_hMod RSHFT 0  &trans        &trans
             >;
         };
 
@@ -278,8 +273,8 @@
             label = "SYSTEM";
             bindings = <
             &kp F1  &kp F2  &kp F3        &kp F4      &kp F5        &kp F6        &kp F7        &kp F8      &kp F9      &kp F10
-            &trans  &trans  &trans        &trans      &trans        &kp C_MUTE    &kp C_PP      &trans      &trans      &trans
-&bt BT_CLR  &trans  &trans  &out OUT_TOG  &bt BT_PRV  &bt BT_NXT    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT  &trans   &trans
+            &none   &none   &none         &none       &none         &kp C_MUTE    &kp C_PP      &none       &none       &none
+&bt BT_CLR  &none   &none   &out OUT_TOG  &bt BT_PRV  &bt BT_NXT    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT  &none    &none
                             &trans        &trans      &trans        &to 0         &trans        &trans
             >;
         };
