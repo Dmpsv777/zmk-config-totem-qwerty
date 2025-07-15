@@ -64,9 +64,9 @@
             timeout-ms = <70>;
         };
 
-        capsWord {
+        CapsWord {
             bindings = <&caps_word>;
-            key-positions = <11 12 13>;
+            key-positions = <1 2 3>;
         };
 
         Del {
@@ -107,6 +107,16 @@
         to2Layer {
             bindings = <&to 2>;
             key-positions = <32 37>;
+        };
+
+        Tab {
+            bindings = <&kp TAB>;
+            key-positions = <13 12>;
+        };
+
+        Esc {
+            bindings = <&kp ESC>;
+            key-positions = <11 10>;
         };
     };
 
