@@ -113,6 +113,11 @@
             bindings = <&to 3>;
             key-positions = <20 10 31 19>;
         };
+
+        dash- {
+            bindings = <&kp MINUS>;
+            key-positions = <10 12>;
+        };
     };
 
     macros {
