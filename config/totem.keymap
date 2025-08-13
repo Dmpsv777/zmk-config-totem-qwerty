@@ -115,8 +115,8 @@
         };
 
         dash- {
-            bindings = <&kp MINUS>;
-            key-positions = <10 12>;
+            bindings = <&kp EQUAL>;
+            key-positions = <10 13>;
         };
     };
 
@@ -264,7 +264,7 @@
             bindings = <
            &kp Q  &kp W  &kp F             &kp P          &kp B                      &kp J                &kp L      &kp U            &kp Y    &kp SEMI
            &kp A  &kp R  &kp S             &kp T          &kp G                      &kp M                &kp N      &kp E            &kp I    &kp O
-&kp EQUAL  &kp Z  &kp X  &kp C             &kp D          &kp V                      &kp K                &kp H      &kp COMMA        &kp DOT  &hSlashStar 0 SLASH  &mt AT SQT
+&kp MINUS  &kp Z  &kp X  &kp C             &kp D          &kp V                      &kp K                &kp H      &kp COMMA        &kp DOT  &hSlashStar 0 SLASH  &mt AT SQT
                          &hml LCTRL ENTER  &kp BACKSPACE  &tLay_hMod LEFT_SHIFT 1    &tLay_hMod RSHIFT 0  &kp SPACE  &hmr RCTRL CAPS
             >;
         };
