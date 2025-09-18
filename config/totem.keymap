@@ -283,7 +283,7 @@
             label = "Digits";
             bindings = <
         &mt PIPE BSLH    &mt AMPS DOLLAR    &kp UNDER                        &kp EQUAL                          &twoKP GREATER_THAN EQUAL    &kp KP_PLUS         &kp KP_N7  &kp KP_N8  &kp KP_N9  &mt COLON SEMI
-        &mt POUND EXCL   &kp AT             &mt LEFT_BRACE LEFT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_PARENTHESIS  &twoKP MINUS GREATER_THAN    &kp KP_MINUS        &kp KP_N4  &kp KP_N5  &kp KP_N6  &mt KP_SLASH KP_ASTERISK
+        &kp POUND        &kp EXCLAMATION    &mt LEFT_BRACE LEFT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_PARENTHESIS  &twoKP MINUS GREATER_THAN    &kp KP_MINUS        &kp KP_N4  &kp KP_N5  &kp KP_N6  &mt KP_SLASH KP_ASTERISK
 &trans  &mt TILDE GRAVE  &mt CARET PERCENT  &mt LEFT_BRACKET LESS_THAN       &mt RIGHT_BRACKET GREATER_THAN     &twoKP LESS_THAN EQUAL       &kp KP_N0           &kp KP_N1  &kp KP_N2  &kp KP_N3  &mt COMMA DOT             &trans
                                             &trans                           &trans                             &tLay_hMod LSHFT 1           &tLay_hMod RSHFT 0  &trans     &trans
             >;
