@@ -74,12 +74,12 @@
             key-positions = <17 18>;
         };
 
-        Meta-L {
+        Win-L {
             bindings = <&kp LEFT_GUI>;
             key-positions = <1 2>;
         };
 
-        Meta-R {
+        Win-R {
             bindings = <&kp RIGHT_GUI>;
             key-positions = <7 8>;
         };
