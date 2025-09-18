@@ -120,12 +120,12 @@
         };
 
         Arrow-L {
-            bindings = <&mt HOME LEFT_ARROW>;
+            bindings = <&kp HOME>;
             key-positions = <10 11>;
         };
 
         Arrow-R {
-            bindings = <&mt END RIGHT_ARROW>;
+            bindings = <&kp END>;
             key-positions = <19 18>;
         };
     };
