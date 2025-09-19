@@ -124,7 +124,7 @@
             key-positions = <10 11>;
         };
 
-        Arrow-R-end {
+        Arrow-R {
             bindings = <&mt END RIGHT_ARROW>;
             key-positions = <19 18>;
         };
