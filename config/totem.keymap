@@ -74,27 +74,27 @@
             key-positions = <17 18>;
         };
 
-        Win-L {
+        Win_L {
             bindings = <&kp LEFT_GUI>;
             key-positions = <1 2>;
         };
 
-        Win-R {
+        Win_R {
             bindings = <&kp RIGHT_GUI>;
             key-positions = <7 8>;
         };
 
-        Alt-L {
+        Alt_L {
             bindings = <&kp LEFT_ALT>;
             key-positions = <2 3>;
         };
 
-        Alt-R {
+        Alt_R {
             bindings = <&kp RIGHT_ALT>;
             key-positions = <7 6>;
         };
 
-        to2L-Nav {
+        to2L_Nav {
             bindings = <&to 2>;
             key-positions = <36 33>;
         };
@@ -109,7 +109,7 @@
             key-positions = <11 12>;
         };
 
-        to3L-Sim {
+        to3L_Sim {
             bindings = <&to 3>;
             key-positions = <20 10 31 19>;
         };
@@ -119,12 +119,12 @@
             key-positions = <10 13>;
         };
 
-        Arrow-L-home {
+        Arrow_L {
             bindings = <&mt HOME LEFT_ARROW>;
             key-positions = <10 11>;
         };
 
-        Arrow-R {
+        Arrow_R {
             bindings = <&mt END RIGHT_ARROW>;
             key-positions = <19 18>;
         };
@@ -289,7 +289,7 @@
             >;
         };
 
-        Navigation {
+        navigation {
             label = "Navigation";
             bindings = <
        &none     &none     &msc SCRL_LEFT  &msc SCRL_RIGHT  &none                 &kp LC(C)           &msc SCRL_UP  &msc SCRL_DOWN  &kp PAGE_UP         &kp PAGE_DOWN
