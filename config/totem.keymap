@@ -51,15 +51,15 @@
     combos {
         compatible = "zmk,combos";
 
-        Bksp {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <16 17>;
+        CapsWrd {
+            bindings = <&caps_word>;
+            key-positions = <2 3 1>;
             timeout-ms = <70>;
         };
 
-        CapsWrd {
-            bindings = <&caps_word>;
-            key-positions = <1 2 3>;
+        Bksp {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <17 16>;
         };
 
         Del {
@@ -69,25 +69,25 @@
 
         WinL {
             bindings = <&kp LEFT_GUI>;
-            key-positions = <1 2>;
+            key-positions = <1 0>;
         };
 
         WinR {
             bindings = <&kp RIGHT_GUI>;
-            key-positions = <7 8>;
+            key-positions = <8 9>;
         };
 
         AltL {
             bindings = <&kp LEFT_ALT>;
-            key-positions = <2 3>;
+            key-positions = <3 4>;
         };
 
         AltR {
             bindings = <&kp RIGHT_ALT>;
-            key-positions = <7 6>;
+            key-positions = <6 5>;
         };
 
-        to2L_Nav {
+        toL2_Nav {
             bindings = <&to 2>;
             key-positions = <36 33>;
         };
@@ -102,7 +102,7 @@
             key-positions = <11 12>;
         };
 
-        to3L_Sym {
+        toL3_Sym {
             bindings = <&to 3>;
             key-positions = <20 10 31 19>;
         };
@@ -112,24 +112,84 @@
             key-positions = <10 13>;
         };
 
-        ArwL_Home {
-            bindings = <&mt HOME LEFT_ARROW>;
-            key-positions = <23 22>;
+        Home {
+            bindings = <&kp HOME>;
+            key-positions = <2 0>;
         };
 
-        ArwR_End {
-            bindings = <&mt END RIGHT_ARROW>;
-            key-positions = <23 24>;
+        End {
+            bindings = <&kp END>;
+            key-positions = <3 1>;
+        };
+
+        ArwL {
+            bindings = <&kp LEFT_ARROW>;
+            key-positions = <2 1>;
+        };
+
+        ArwR {
+            bindings = <&kp RIGHT_ARROW>;
+            key-positions = <2 3>;
+        };
+
+        ArwUp {
+            bindings = <&kp UP_ARROW>;
+            key-positions = <6 7>;
+        };
+
+        ArwDn {
+            bindings = <&kp DOWN_ARROW>;
+            key-positions = <7 8>;
         };
 
         ctrArwL {
             bindings = <&kp LC(LEFT_ARROW)>;
-            key-positions = <27 28>;
+            key-positions = <6 8>;
         };
 
         ctrArwR {
             bindings = <&kp LC(RIGHT_ARROW)>;
+            key-positions = <7 9>;
+        };
+
+        mMovL {
+            bindings = <&mmv MOVE_LEFT>;
+            key-positions = <23 22>;
+        };
+
+        mMovR {
+            bindings = <&mmv MOVE_RIGHT>;
+            key-positions = <23 24>;
+        };
+
+        mMovUp {
+            bindings = <&mmv MOVE_UP>;
+            key-positions = <27 28>;
+        };
+
+        mMovDn {
+            bindings = <&mmv MOVE_DOWN>;
             key-positions = <28 29>;
+        };
+
+        mBtn1 {
+            bindings = <&mkp MB1>;
+            key-positions = <24 22>;
+        };
+
+        mBtn2 {
+            bindings = <&mkp MB2>;
+            key-positions = <23 21>;
+        };
+
+        mScrUp {
+            bindings = <&msc SCRL_UP>;
+            key-positions = <27 29>;
+        };
+
+        mScrDn {
+            bindings = <&msc SCRL_DOWN>;
+            key-positions = <30 28>;
         };
     };
 
