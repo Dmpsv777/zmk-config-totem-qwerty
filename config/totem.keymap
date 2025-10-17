@@ -47,24 +47,17 @@
 //MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 //MAKE_HRM(hml_layer, &mo, &kp, KEYS_R THUMBS) // switch layer like HRM
 
-&mt {
-    quick-tap-ms = <130>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <250>;
-    require-prior-idle-ms = <130>;
-};
-
 / {
     combos {
         compatible = "zmk,combos";
 
-        Backspace {
+        Bksp {
             bindings = <&kp BACKSPACE>;
             key-positions = <16 17>;
             timeout-ms = <70>;
         };
 
-        CapsWord {
+        CapsWrd {
             bindings = <&caps_word>;
             key-positions = <1 2 3>;
         };
@@ -74,22 +67,22 @@
             key-positions = <17 18>;
         };
 
-        Win_L {
+        WinL {
             bindings = <&kp LEFT_GUI>;
             key-positions = <1 2>;
         };
 
-        Win_R {
+        WinR {
             bindings = <&kp RIGHT_GUI>;
             key-positions = <7 8>;
         };
 
-        Alt_L {
+        AltL {
             bindings = <&kp LEFT_ALT>;
             key-positions = <2 3>;
         };
 
-        Alt_R {
+        AltR {
             bindings = <&kp RIGHT_ALT>;
             key-positions = <7 6>;
         };
@@ -109,7 +102,7 @@
             key-positions = <11 12>;
         };
 
-        to3L_Sim {
+        to3L_Sym {
             bindings = <&to 3>;
             key-positions = <20 10 31 19>;
         };
@@ -119,14 +112,24 @@
             key-positions = <10 13>;
         };
 
-        Arrow_L {
+        ArwL_Home {
             bindings = <&mt HOME LEFT_ARROW>;
-            key-positions = <10 11>;
+            key-positions = <23 22>;
         };
 
-        Arrow_R {
+        ArwR_End {
             bindings = <&mt END RIGHT_ARROW>;
-            key-positions = <19 18>;
+            key-positions = <23 24>;
+        };
+
+        ctrArwL {
+            bindings = <&kp LC(LEFT_ARROW)>;
+            key-positions = <27 28>;
+        };
+
+        ctrArwR {
+            bindings = <&kp LC(RIGHT_ARROW)>;
+            key-positions = <28 29>;
         };
     };
 
@@ -214,9 +217,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
-            flavor = "balanced";
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
         };
@@ -228,9 +228,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
-            flavor = "balanced";
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
         };
@@ -242,7 +239,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "tap-preferred";
         };
 
         escOrTab_XXX: escOrTab_XXX {
@@ -254,15 +250,13 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        tLay_hMod: tLay_hMod {
+        tLr_hMod: tLr_hMod {
             compatible = "zmk,behavior-hold-tap";
-            label = "TLAY_HMOD";
+            label = "TLR_HMOD";
             bindings = <&kp>, <&to>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <100>;
-            flavor = "tap-preferred";
         };
     };
 
@@ -272,30 +266,30 @@
         ColemakDH {
             label = "BASE";
             bindings = <
-           &kp Q  &kp W  &kp F             &kp P          &kp B                      &kp J                &kp L      &kp U            &kp Y    &kp SEMI
-           &kp A  &kp R  &kp S             &kp T          &kp G                      &kp M                &kp N      &kp E            &kp I    &kp O
-&kp MINUS  &kp Z  &kp X  &kp C             &kp D          &kp V                      &kp K                &kp H      &kp COMMA        &kp DOT  &hSlashStar 0 SLASH  &mt AT SQT
-                         &hml LCTRL ENTER  &kp BACKSPACE  &tLay_hMod LEFT_SHIFT 1    &tLay_hMod RSHIFT 0  &kp SPACE  &hmr RCTRL CAPS
+           &kp Q  &kp W  &kp F             &kp P          &kp B                     &kp J               &kp L      &kp U            &kp Y    &kp SEMI
+           &kp A  &kp R  &kp S             &kp T          &kp G                     &kp M               &kp N      &kp E            &kp I    &kp O
+&kp MINUS  &kp Z  &kp X  &kp C             &kp D          &kp V                     &kp K               &kp H      &kp COMMA        &kp DOT  &hSlashStar 0 SLASH  &mt AT SQT
+                         &hml LCTRL ENTER  &kp BACKSPACE  &tLr_hMod LEFT_SHIFT 1    &tLr_hMod RSHIFT 0  &kp SPACE  &hmr RCTRL CAPS
             >;
         };
 
         digits {
             label = "Digits";
             bindings = <
-        &mt PIPE BSLH    &mt AMPS DOLLAR    &kp UNDER                        &kp EQUAL                          &twoKP GREATER_THAN EQUAL    &kp KP_PLUS         &kp KP_N7  &kp KP_N8  &kp KP_N9  &mt COLON SEMI
-        &kp EXCL         &kp HASH           &mt LEFT_BRACE LEFT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_PARENTHESIS  &twoKP MINUS GREATER_THAN    &kp KP_MINUS        &kp KP_N4  &kp KP_N5  &kp KP_N6  &mt KP_SLASH KP_ASTERISK
-&trans  &mt TILDE GRAVE  &mt CARET PERCENT  &mt LEFT_BRACKET LESS_THAN       &mt RIGHT_BRACKET GREATER_THAN     &twoKP LESS_THAN EQUAL       &kp KP_N0           &kp KP_N1  &kp KP_N2  &kp KP_N3  &mt COMMA DOT             &trans
-                                            &trans                           &trans                             &tLay_hMod LSHFT 1           &tLay_hMod RSHFT 0  &trans     &trans
+        &mt PIPE BSLH    &mt AMPS DOLLAR    &kp UNDER                        &kp EQUAL                          &twoKP GREATER_THAN EQUAL    &kp KP_PLUS   &kp KP_N7  &kp KP_N8  &kp KP_N9  &trans
+        &kp EXCL         &kp HASH           &mt LEFT_BRACE LEFT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_PARENTHESIS  &twoKP MINUS GREATER_THAN    &kp KP_MINUS  &kp KP_N4  &kp KP_N5  &kp KP_N6  &mt KP_SLASH KP_ASTERISK
+&trans  &mt TILDE GRAVE  &mt CARET PERCENT  &mt LEFT_BRACKET LESS_THAN       &mt RIGHT_BRACKET GREATER_THAN     &twoKP LESS_THAN EQUAL       &kp KP_N0     &kp KP_N1  &kp KP_N2  &kp KP_N3  &mt COMMA DOT             &trans
+                                            &trans                           &trans                             &trans                       &trans        &trans     &trans
             >;
         };
 
         navigation {
             label = "Navigation";
             bindings = <
-       &none     &none     &msc SCRL_LEFT  &msc SCRL_RIGHT  &none                 &kp LC(C)           &msc SCRL_UP  &msc SCRL_DOWN  &kp PAGE_UP         &kp PAGE_DOWN
-       &kp HOME  &kp END   &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp LC(Y)             &kp LC(X)           &kp UP_ARROW  &kp DOWN_ARROW  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)
-&none  &mkp MB2  &mkp MB1  &mmv MOVE_LEFT  &mmv MOVE_RIGHT  &kp LC(Z)             &kp LC(V)           &mmv MOVE_UP  &mmv MOVE_DOWN  &none               &none                &kp PRINTSCREEN
-                           &trans          &trans           &tLay_hMod LSHFT 1    &tLay_hMod RSHFT 0  &trans        &trans
+       &none     &none     &msc SCRL_LEFT  &msc SCRL_RIGHT  &none        &kp LC(C)  &msc SCRL_UP  &msc SCRL_DOWN  &none  &none
+       &kp HOME  &kp END   &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp LC(Y)    &kp LC(X)  &kp UP_ARROW  &kp DOWN_ARROW  &none  &kp PAGE_UP
+&none  &mkp MB2  &mkp MB1  &mmv MOVE_LEFT  &mmv MOVE_RIGHT  &kp LC(Z)    &kp LC(V)  &mmv MOVE_UP  &mmv MOVE_DOWN  &none  &kp PAGE_DOWN  &none
+                           &trans          &trans           &trans       &trans     &trans        &trans
             >;
         };
 
@@ -305,7 +299,7 @@
             &kp F1  &kp F2  &kp F3        &kp F4      &kp F5        &kp F6        &kp F7        &kp F8      &kp F9      &kp F10
             &none   &none   &none         &none       &none         &kp C_MUTE    &kp C_PP      &none       &none       &none
 &bt BT_CLR  &none   &none   &out OUT_TOG  &bt BT_PRV  &bt BT_NXT    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT  &none    &none
-                            &trans        &trans      &to 1         &to 0         &trans        &trans
+                            &trans        &trans      &trans        &trans        &trans        &trans
             >;
         };
     };
