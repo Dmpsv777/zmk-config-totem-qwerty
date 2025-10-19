@@ -51,6 +51,9 @@
     bindings = <&kp>, <&kp>;
 
     flavor = "tap-preferred";
+    hold-trigger-on-release;
+    quick-tap-ms = <200>;
+    require-prior-idle-ms = <250>;
 };
 
 / {
