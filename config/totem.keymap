@@ -47,6 +47,12 @@
 //MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 //MAKE_HRM(hml_layer, &mo, &kp, KEYS_R THUMBS) // switch layer like HRM
 
+&mt {
+    bindings = <&kp>, <&kp>;
+
+    flavor = "tap-preferred";
+};
+
 / {
     combos {
         compatible = "zmk,combos";
