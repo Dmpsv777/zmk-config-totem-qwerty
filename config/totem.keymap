@@ -201,11 +201,6 @@
             key-positions = <3 0>;
         };
 
-        smAt {
-            bindings = <&kp AT_SIGN>;
-            key-positions = <21 24>;
-        };
-
         toLDigiAt {
             bindings = <&lt 1 AT_SIGN>;
             key-positions = <11 13>;
