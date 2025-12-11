@@ -106,7 +106,7 @@
             key-positions = <11 12>;
         };
 
-        toL3_Sym {
+        toL2Sym {
             bindings = <&to 2>;
             key-positions = <20 10 31 19>;
         };
@@ -272,12 +272,12 @@
             key-positions = <10 30>;
         };
 
-        ParenthesisL {
+        ParenthL {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <10 8>;
         };
 
-        ParenthesisR {
+        ParenthR {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <10 9>;
         };
