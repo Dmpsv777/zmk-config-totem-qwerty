@@ -206,9 +206,9 @@
             key-positions = <21 24>;
         };
 
-        toLDigits {
-            bindings = <&mo 1>;
-            key-positions = <10 11>;
+        toLDigiAt {
+            bindings = <&lt 1 AT_SIGN>;
+            key-positions = <11 13>;
         };
     };
 
