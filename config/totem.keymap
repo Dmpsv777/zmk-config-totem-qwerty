@@ -64,7 +64,6 @@
         CapsWrd {
             bindings = <&caps_word>;
             key-positions = <2 3 1>;
-            timeout-ms = <70>;
         };
 
         Bksp {
@@ -97,11 +96,6 @@
             key-positions = <6 5>;
         };
 
-        toL2_Nav {
-            bindings = <&to 2>;
-            key-positions = <36 33>;
-        };
-
         Tab {
             bindings = <&kp TAB>;
             key-positions = <13 12>;
@@ -113,7 +107,7 @@
         };
 
         toL3_Sym {
-            bindings = <&to 3>;
+            bindings = <&to 2>;
             key-positions = <20 10 31 19>;
         };
 
@@ -287,6 +281,16 @@
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <10 9>;
         };
+
+        pageUp {
+            bindings = <&kp PAGE_UP>;
+            key-positions = <27 29 28>;
+        };
+
+        pageDown {
+            bindings = <&kp PAGE_DOWN>;
+            key-positions = <29 28 30>;
+        };
     };
 
     macros {
@@ -436,16 +440,6 @@
         &kp LEFT_BRACKET           &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp CARET      &kp KP_MINUS  &kp KP_N4  &kp KP_N5  &kp KP_N6  &mt KP_SLASH KP_ASTERISK
 &trans  &mt PIPE NON_US_BACKSLASH  &kp TILDE          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE      &kp KP_N0     &kp KP_N1  &kp KP_N2  &kp KP_N3  &mt COMMA DOT             &trans
                                                       &trans                &trans                 &trans         &trans        &trans     &trans
-            >;
-        };
-
-        navigation {
-            label = "Navigation";
-            bindings = <
-       &none     &none     &msc SCRL_LEFT  &msc SCRL_RIGHT  &none        &kp LC(C)  &msc SCRL_UP  &msc SCRL_DOWN  &none  &none
-       &kp HOME  &kp END   &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp LC(Y)    &kp LC(X)  &kp UP_ARROW  &kp DOWN_ARROW  &none  &kp PAGE_UP
-&none  &mkp MB2  &mkp MB1  &mmv MOVE_LEFT  &mmv MOVE_RIGHT  &kp LC(Z)    &kp LC(V)  &mmv MOVE_UP  &mmv MOVE_DOWN  &none  &kp PAGE_DOWN  &none
-                           &trans          &trans           &trans       &trans     &trans        &trans
             >;
         };
 
