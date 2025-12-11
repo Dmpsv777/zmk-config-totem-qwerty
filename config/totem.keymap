@@ -205,6 +205,11 @@
             bindings = <&kp AT_SIGN>;
             key-positions = <21 24>;
         };
+
+        toLDigits {
+            bindings = <&mo 1>;
+            key-positions = <10 11>;
+        };
     };
 
     macros {
