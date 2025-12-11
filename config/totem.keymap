@@ -202,24 +202,64 @@
             timeout-ms = <70>;
         };
 
-        pageUp {
-            bindings = <&kp PAGE_UP>;
-            key-positions = <27 29 28>;
-        };
-
-        pageDown {
-            bindings = <&kp PAGE_DOWN>;
-            key-positions = <29 28 30>;
-        };
-
-        exclamation {
+        Excl {
             bindings = <&kp EXCLAMATION>;
             key-positions = <3 0>;
         };
 
-        at {
+        At {
             bindings = <&kp AT_SIGN>;
             key-positions = <21 24>;
+        };
+
+        n0 {
+            bindings = <&kp KP_N0>;
+            key-positions = <11 26>;
+        };
+
+        n1 {
+            bindings = <&kp KP_NUMBER_1>;
+            key-positions = <11 27>;
+        };
+
+        n2 {
+            bindings = <&kp KP_NUMBER_2>;
+            key-positions = <11 28>;
+        };
+
+        n3 {
+            bindings = <&kp KP_NUMBER_3>;
+            key-positions = <11 29>;
+        };
+
+        n4 {
+            bindings = <&kp KP_NUMBER_4>;
+            key-positions = <11 16>;
+        };
+
+        n5 {
+            bindings = <&kp KP_NUMBER_5>;
+            key-positions = <11 17>;
+        };
+
+        n6 {
+            bindings = <&kp KP_NUMBER_6>;
+            key-positions = <11 18>;
+        };
+
+        n7 {
+            bindings = <&kp KP_NUMBER_7>;
+            key-positions = <11 6>;
+        };
+
+        n8 {
+            bindings = <&kp KP_NUMBER_8>;
+            key-positions = <11 7>;
+        };
+
+        n9 {
+            bindings = <&kp KP_NUMBER_9>;
+            key-positions = <11 8>;
         };
     };
 
