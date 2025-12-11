@@ -211,6 +211,16 @@
             bindings = <&kp PAGE_DOWN>;
             key-positions = <29 28 30>;
         };
+
+        exclamation {
+            bindings = <&kp EXCLAMATION>;
+            key-positions = <3 0>;
+        };
+
+        at {
+            bindings = <&kp AT_SIGN>;
+            key-positions = <21 24>;
+        };
     };
 
     macros {
