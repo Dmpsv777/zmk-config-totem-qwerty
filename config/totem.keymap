@@ -201,8 +201,8 @@
             key-positions = <3 0>;
         };
 
-        to1DigiAt {
-            bindings = <&lt 1 AT_SIGN>;
+        to1Digits {
+            bindings = <&mo 1>;
             key-positions = <11 13>;
         };
 
@@ -211,9 +211,19 @@
             key-positions = <1 4>;
         };
 
-        to1SymHash {
-            bindings = <&lt 1 HASH>;
+        to1Symbols {
+            bindings = <&mo 1>;
             key-positions = <16 18>;
+        };
+
+        smAt {
+            bindings = <&kp AT_SIGN>;
+            key-positions = <21 24>;
+        };
+
+        smHash {
+            bindings = <&kp HASH>;
+            key-positions = <27 30>;
         };
     };
 
