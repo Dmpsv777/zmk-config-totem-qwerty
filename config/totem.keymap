@@ -221,9 +221,9 @@
             key-positions = <21 24>;
         };
 
-        smHash {
-            bindings = <&kp HASH>;
-            key-positions = <27 30>;
+        smAsterisk {
+            bindings = <&kp ASTERISK>;
+            key-positions = <16 19>;
         };
     };
 
@@ -292,10 +292,10 @@
         digits {
             label = "Digits";
             bindings = <
-        &kp EXCLAMATION            &kp AMPS           &kp POUND             &kp DOLLAR             &kp PERCENT    &kp KP_PLUS   &kp KP_N7  &kp KP_N8  &kp KP_N9  &trans
-        &kp LEFT_BRACKET           &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp CARET      &kp KP_MINUS  &kp KP_N4  &kp KP_N5  &kp KP_N6  &mt KP_SLASH KP_ASTERISK
-&trans  &mt PIPE NON_US_BACKSLASH  &kp TILDE          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE      &kp KP_N0     &kp KP_N1  &kp KP_N2  &kp KP_N3  &mt COMMA DOT             &trans
-                                                      &trans                &trans                 &trans         &trans        &trans     &trans
+        &kp EXCLAMATION     &kp AMPS     &kp POUND         &kp DOLLAR         &kp PERCENT    &kp KP_MINUS  &kp KP_N7  &kp KP_N8  &kp N9     &trans
+        &kp PIPE            &kp AT_SIGN  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp CARET      &kp KP_PLUS   &kp KP_N4  &kp KP_N5  &kp KP_N6  &mt KP_COMMA KP_DOT
+&trans  &mt PIPE BACKSLASH  &kp TILDE    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp GRAVE      &kp N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &trans               &trans
+                                         &trans            &trans             &trans         &trans        &trans     &trans
             >;
         };
 
