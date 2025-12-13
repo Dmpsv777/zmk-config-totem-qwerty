@@ -208,7 +208,7 @@
 
         capsLk {
             bindings = <&kp CAPSLOCK>;
-            key-positions = <1 4>;
+            key-positions = <7 6 8>;
         };
 
         to1Symbols {
@@ -292,10 +292,10 @@
         digits {
             label = "Digits";
             bindings = <
-        &kp EXCLAMATION     &kp AMPS     &kp POUND         &kp DOLLAR         &kp PERCENT    &kp KP_MINUS  &kp KP_N7  &kp KP_N8  &kp N9     &trans
-        &kp PIPE            &kp AT_SIGN  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp CARET      &kp KP_PLUS   &kp KP_N4  &kp KP_N5  &kp KP_N6  &mt KP_COMMA KP_DOT
-&trans  &mt PIPE BACKSLASH  &kp TILDE    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp GRAVE      &kp N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &trans               &trans
-                                         &trans            &trans             &trans         &trans        &trans     &trans
+        &kp EXCLAMATION     &kp AMPS     &kp POUND         &kp DOLLAR         &kp PERCENT    &kp MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &trans
+        &kp PIPE            &kp AT_SIGN  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp CARET      &kp PLUS   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &mt COMMA PERIOD
+&trans  &mt PIPE BACKSLASH  &kp TILDE    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp GRAVE      &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans            &trans
+                                         &trans            &trans             &trans         &trans     &trans        &trans
             >;
         };
 
