@@ -63,12 +63,12 @@
 
         altL {
             bindings = <&kp LEFT_ALT>;
-            key-positions = <10 14>;
+            key-positions = <21 22>;
         };
 
         altR {
             bindings = <&kp RIGHT_ALT>;
-            key-positions = <15 19>;
+            key-positions = <30 29>;
         };
 
         bksp {
@@ -221,19 +221,36 @@
             key-positions = <27 29>;
         };
 
-        zzzTo1Digits {
+        zzzToL0 {
+            bindings = <&to 0>;
+            key-positions = <11 18>;
+            layers = <1 2>;
+        };
+
+        zzzToL1 {
+            bindings = <&to 1>;
+            key-positions = <11 18>;
+            layers = <0>;
+        };
+
+        zzzToL1moDigi {
             bindings = <&mo 1>;
             key-positions = <11 10>;
         };
 
-        zzzTo1Symbols {
+        zzzToL1moSymb {
             bindings = <&mo 1>;
             key-positions = <18 19>;
         };
 
-        to2System {
+        zzzToL2SysTtm {
             bindings = <&to 2>;
             key-positions = <20 31>;
+        };
+
+        space {
+            bindings = <&kp SPACE>;
+            key-positions = <10 14>;
         };
     };
 
@@ -292,20 +309,20 @@
         colemakDH {
             label = "BASE";
             bindings = <
-           &kp Q  &kp W  &kp F             &kp P          &kp B                     &kp J               &kp L      &kp U             &kp Y    &kp SEMI
-           &kp A  &kp R  &kp S             &kp T          &kp G                     &kp M               &kp N      &kp E             &kp I    &kp O
-&kp MINUS  &kp Z  &kp X  &kp C             &kp D          &kp V                     &kp K               &kp H      &kp COMMA         &kp DOT  &kp SLASH  &kp APOSTROPHE
-                         &hml LCTRL ENTER  &kp BACKSPACE  &tLr_hMod LEFT_SHIFT 1    &tLr_hMod RSHIFT 0  &kp SPACE  &hmr RCTRL ENTER
+           &kp Q  &kp W  &kp F             &kp P          &kp B             &kp J       &kp L      &kp U             &kp Y    &kp SEMI
+           &kp A  &kp R  &kp S             &kp T          &kp G             &kp M       &kp N      &kp E             &kp I    &kp O
+&kp MINUS  &kp Z  &kp X  &kp C             &kp D          &kp V             &kp K       &kp H      &kp COMMA         &kp DOT  &kp SLASH  &kp APOSTROPHE
+                         &hml LCTRL ENTER  &kp BACKSPACE  &kp LEFT_SHIFT    &kp RSHIFT  &kp SPACE  &hmr RCTRL ENTER
             >;
         };
 
         digits {
             label = "Digits";
             bindings = <
-        &kp EXCLAMATION     &kp AMPS     &kp POUND         &kp DOLLAR         &kp PERCENT    &kp MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &trans
-        &kp PIPE            &kp AT_SIGN  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp CARET      &kp PLUS   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &mt COMMA PERIOD
-&trans  &mt PIPE BACKSLASH  &kp TILDE    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp GRAVE      &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans            &trans
-                                         &trans            &trans             &trans         &trans     &trans        &trans
+        &kp PIPE       &kp AMPS   &kp POUND         &kp DOLLAR         &kp PERCENT    &kp MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &trans
+        &kp BACKSLASH  &none      &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp CARET      &kp PLUS   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &mt COMMA PERIOD
+&trans  &none          &kp TILDE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp GRAVE      &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans            &trans
+                                  &trans            &trans             &trans         &trans     &trans        &trans
             >;
         };
 
