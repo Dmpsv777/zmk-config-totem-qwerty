@@ -320,7 +320,7 @@
             label = "Digits";
             bindings = <
         &kp CARET  &kp AMPS       &kp POUND         &kp DOLLAR         &kp PERCENT    &kp MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &trans
-        &kp TILDE  &kt PIPE       &kp LEFT_BRACE    &kp RIGHT_BRACE    &none          &kp PLUS   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &mt COMMA PERIOD
+        &kp TILDE  &kp PIPE       &kp LEFT_BRACE    &kp RIGHT_BRACE    &none          &kp PLUS   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &mt COMMA PERIOD
 &trans  &kp GRAVE  &kp BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none          &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans            &trans
                                   &trans            &trans             &trans         &trans     &trans        &trans
             >;
