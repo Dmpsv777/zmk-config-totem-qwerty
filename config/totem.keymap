@@ -71,7 +71,7 @@
             key-positions = <30 29>;
         };
 
-        bksp {
+        bkspR {
             bindings = <&kp BACKSPACE>;
             key-positions = <6 7>;
         };
@@ -86,7 +86,12 @@
             key-positions = <2 3 1>;
         };
 
-        del {
+        delL {
+            bindings = <&kp DEL>;
+            key-positions = <14 13>;
+        };
+
+        delR {
             bindings = <&kp DEL>;
             key-positions = <7 8>;
         };
@@ -94,6 +99,11 @@
         esc {
             bindings = <&kp ESC>;
             key-positions = <2 1>;
+        };
+
+        spaceL {
+            bindings = <&kp SPACE>;
+            key-positions = <10 14>;
         };
 
         symAsterisk {
@@ -247,11 +257,6 @@
             bindings = <&to 2>;
             key-positions = <20 31>;
         };
-
-        space {
-            bindings = <&kp SPACE>;
-            key-positions = <10 14>;
-        };
     };
 
     macros {
@@ -319,10 +324,10 @@
         digits {
             label = "Digits";
             bindings = <
-        &kp CARET  &kp AMPS       &kp POUND         &kp DOLLAR         &kp PERCENT    &kp MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &trans
-        &kp TILDE  &kp PIPE       &kp LEFT_BRACE    &kp RIGHT_BRACE    &none          &kp PLUS   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &mt COMMA PERIOD
-&trans  &kp GRAVE  &kp BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none          &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans            &trans
-                                  &trans            &trans             &trans         &trans     &trans        &trans
+        &none      &kp AMPS       &kp CARET         &kp DOLLAR         &none     &kp HASH     &kp NUMBER_7  &kp NUMBER_8  &kp N9        &trans
+        &kp TILDE  &kp PIPE       &kp LEFT_BRACE    &kp RIGHT_BRACE    &none     &kp PERCENT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PERIOD
+&trans  &kp GRAVE  &kp BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none     &kp N0       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans      &kp COMMA
+                                  &trans            &trans             &trans    &trans       &trans        &trans
             >;
         };
 
