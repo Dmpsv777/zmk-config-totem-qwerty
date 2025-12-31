@@ -231,13 +231,13 @@
             key-positions = <27 29>;
         };
 
-        zzzToL0 {
+        zzzToL0ColemakDH {
             bindings = <&to 0>;
             key-positions = <11 18>;
             layers = <1 2>;
         };
 
-        zzzToL1 {
+        zzzToL1DigiSymb {
             bindings = <&to 1>;
             key-positions = <11 18>;
             layers = <0>;
@@ -256,6 +256,16 @@
         zzzToL2SysTtm {
             bindings = <&to 2>;
             key-positions = <20 31>;
+        };
+
+        ctrSlshL {
+            bindings = <&kp LC(SLASH)>;
+            key-positions = <25 24>;
+        };
+
+        ctrSlshR {
+            bindings = <&kp LC(SLASH)>;
+            key-positions = <26 27>;
         };
     };
 
