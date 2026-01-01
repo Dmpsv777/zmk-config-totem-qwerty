@@ -108,7 +108,7 @@
 
         symAsterisk {
             bindings = <&kp ASTERISK>;
-            key-positions = <6 9>;
+            key-positions = <30 27>;
         };
 
         symAt {
@@ -133,7 +133,7 @@
 
         symParenthR {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <27 30>;
+            key-positions = <9 6>;
         };
 
         tab {
