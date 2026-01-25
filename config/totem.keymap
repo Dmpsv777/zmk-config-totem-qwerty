@@ -76,12 +76,12 @@
             key-positions = <6 7>;
         };
 
-        capsLk {
+        capsLock {
             bindings = <&kp CAPSLOCK>;
             key-positions = <7 6 8>;
         };
 
-        capsWrd {
+        capsWord {
             bindings = <&caps_word>;
             key-positions = <2 3 1>;
         };
@@ -116,52 +116,52 @@
             key-positions = <10 14>;
         };
 
-        symAsterisk {
+        symbAsterisk {
             bindings = <&kp ASTERISK>;
             key-positions = <15 16>;
         };
 
-        symAt {
+        symbAt {
             bindings = <&kp AT_SIGN>;
             key-positions = <21 24>;
         };
 
-        symBraceLt {
+        symbBraceLft {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <9 6>;
         };
 
-        symBraceRt {
+        symbBraceRgt {
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <9 5>;
         };
 
-        symBracketLt {
+        symbBracketLft {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <30 27>;
         };
 
-        symBracketRt {
+        symbBracketRgt {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <30 26>;
         };
 
-        symEqualPlus {
+        symbEqualPlus {
             bindings = <&kp EQUAL>;
             key-positions = <10 13>;
         };
 
-        symExclamation {
+        symbExclamation {
             bindings = <&kp EXCLAMATION>;
             key-positions = <3 0>;
         };
 
-        symParenthLt {
+        symbParenthesisLft {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <16 19>;
         };
 
-        symParenthRt {
+        symbParenthesisRgt {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <19 15>;
         };
@@ -181,72 +181,72 @@
             key-positions = <8 9>;
         };
 
-        zzCsrArwDn {
+        zz_ArwDwn {
             bindings = <&kp DOWN_ARROW>;
             key-positions = <17 18>;
         };
 
-        zzCsrArwLt {
+        zz_ArwLft {
             bindings = <&kp LEFT_ARROW>;
             key-positions = <12 11>;
         };
 
-        zzCsrArwRt {
+        zz_ArwRgt {
             bindings = <&kp RIGHT_ARROW>;
             key-positions = <13 12>;
         };
 
-        zzCsrArwUp {
+        zz_ArwUp {
             bindings = <&kp UP_ARROW>;
             key-positions = <17 16>;
         };
 
-        zzCsrEnd {
+        zz_End {
             bindings = <&kp END>;
             key-positions = <13 11>;
         };
 
-        zzCsrHome {
+        zz_Home {
             bindings = <&kp HOME>;
             key-positions = <12 10>;
         };
 
-        zzCtrArwLt {
+        zzCtrArwLft {
             bindings = <&kp LC(LEFT_ARROW)>;
             key-positions = <16 18>;
         };
 
-        zzCtrArwRt {
+        zzCtrArwRgt {
             bindings = <&kp LC(RIGHT_ARROW)>;
             key-positions = <19 17>;
         };
 
-        zzMsBtn1 {
+        zzMouseBtn1 {
             bindings = <&mkp MB1>;
             key-positions = <24 22>;
         };
 
-        zzMsBtn2 {
+        zzMouseBtn2 {
             bindings = <&mkp MB2>;
             key-positions = <23 21>;
         };
 
-        zzMsMovDn {
+        zzMouseMovDwn {
             bindings = <&mmv MOVE_DOWN>;
             key-positions = <28 29>;
         };
 
-        zzMsMovLt {
+        zzMouseMovLft {
             bindings = <&mmv MOVE_LEFT>;
             key-positions = <23 22>;
         };
 
-        zzMsMovRt {
+        zzMouseMovRgt {
             bindings = <&mmv MOVE_RIGHT>;
             key-positions = <23 24>;
         };
 
-        zzMsMovUp {
+        zzMouseMovUp {
             bindings = <&mmv MOVE_UP>;
             key-positions = <27 28>;
         };
@@ -261,21 +261,38 @@
             key-positions = <27 29>;
         };
 
-        zzzToL0ColemakDH {
+        zzzToLr0ColemakdhL {
             bindings = <&to 0>;
-            key-positions = <31 20>;
+            key-positions = <20 0>;
             layers = <1 2>;
         };
 
-        zzzToL1DigiSymb {
+        zzzToLr0ColemakdhR {
+            bindings = <&to 0>;
+            key-positions = <31 9>;
+            layers = <1 2>;
+        };
+
+        zzzToLr1DigiSymbL {
             bindings = <&to 1>;
-            key-positions = <20 31>;
+            key-positions = <20 10>;
             layers = <0>;
         };
 
-        zzzToL2SysTTM {
+        zzzToLr1DigiSymbR {
+            bindings = <&to 1>;
+            key-positions = <31 19>;
+            layers = <0>;
+        };
+
+        zzzToLr2SysL_Ttm {
             bindings = <&to 2>;
-            key-positions = <20 31 10 19>;
+            key-positions = <20 21>;
+        };
+
+        zzzToLr2SysR_Ttm {
+            bindings = <&to 2>;
+            key-positions = <30 31>;
         };
     };
 
@@ -296,9 +313,9 @@
     behaviors {
         // this is homerow mod that works identical to urob's one, but this one allows visual editor to understand
 
-        hml: hml {
+        ctrL_enter: ctrL_enter {
             compatible = "zmk,behavior-hold-tap";
-            label = "HML";
+            label = "CTRL_ENTER";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -307,9 +324,9 @@
             hold-trigger-on-release;
         };
 
-        hmr: hmr {
+        ctrR_enter: ctrR_enter {
             compatible = "zmk,behavior-hold-tap";
-            label = "HMR";
+            label = "CTRR_ENTER";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -318,9 +335,9 @@
             hold-trigger-on-release;
         };
 
-        tLr_hMod: tLr_hMod {
+        mod_toLr: mod_toLr {
             compatible = "zmk,behavior-hold-tap";
-            label = "TLR_HMOD";
+            label = "MOD_TOLR";
             bindings = <&kp>, <&to>;
 
             #binding-cells = <2>;
@@ -344,10 +361,10 @@
         colemakDH {
             label = "BASE";
             bindings = <
-                  &kp Q  &kp W  &kp F             &kp P          &kp B             &kp J       &kp L      &kp U             &kp Y    &kp SEMI
-                  &kp A  &kp R  &kp S             &kp T          &kp G             &kp M       &kp N      &kp E             &kp I    &kp O
-&moLr_kp 1 MINUS  &kp Z  &kp X  &kp C             &kp D          &kp V             &kp K       &kp H      &kp COMMA         &kp DOT  &kp SLASH  &moLr_kp 1 APOSTROPHE
-                                &hml LCTRL ENTER  &kp BACKSPACE  &kp LEFT_SHIFT    &kp RSHIFT  &kp SPACE  &hmr RCTRL ENTER
+                  &kp Q  &kp W  &kp F                    &kp P          &kp B             &kp J       &kp L      &kp U                    &kp Y    &kp SEMI
+                  &kp A  &kp R  &kp S                    &kp T          &kp G             &kp M       &kp N      &kp E                    &kp I    &kp O
+&moLr_kp 1 MINUS  &kp Z  &kp X  &kp C                    &kp D          &kp V             &kp K       &kp H      &kp COMMA                &kp DOT  &kp SLASH  &moLr_kp 1 APOSTROPHE
+                                &ctrL_enter LCTRL ENTER  &kp BACKSPACE  &kp LEFT_SHIFT    &kp RSHIFT  &kp SPACE  &ctrR_enter RCTRL ENTER
             >;
         };
 
