@@ -97,8 +97,8 @@
         };
 
         delL {
-            bindings = <&kp DEL>;
-            key-positions = <14 13>;
+            bindings = <&kp DELETE>;
+            key-positions = <10 11>;
         };
 
         delR {
@@ -113,57 +113,7 @@
 
         spaceL {
             bindings = <&kp SPACE>;
-            key-positions = <10 14>;
-        };
-
-        symbAsterisk {
-            bindings = <&kp ASTERISK>;
-            key-positions = <15 16>;
-        };
-
-        symbAt {
-            bindings = <&kp AT_SIGN>;
-            key-positions = <21 24>;
-        };
-
-        symbBraceLft {
-            bindings = <&kp LEFT_BRACE>;
-            key-positions = <9 6>;
-        };
-
-        symbBraceRgt {
-            bindings = <&kp RIGHT_BRACE>;
-            key-positions = <9 5>;
-        };
-
-        symbBracketLft {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <30 27>;
-        };
-
-        symbBracketRgt {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <30 26>;
-        };
-
-        symbEqualPlus {
-            bindings = <&kp EQUAL>;
-            key-positions = <10 13>;
-        };
-
-        symbExclamation {
-            bindings = <&kp EXCLAMATION>;
-            key-positions = <3 0>;
-        };
-
-        symbParenthesisLft {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <16 19>;
-        };
-
-        symbParenthesisRgt {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <19 15>;
+            key-positions = <14 13>;
         };
 
         tab {
@@ -181,116 +131,201 @@
             key-positions = <8 9>;
         };
 
-        zz_ArwDwn {
+        z_symbAmpersand {
+            bindings = <&kp AMPERSAND>;
+            key-positions = <10 14>;
+        };
+
+        z_symbAsterisk {
+            bindings = <&kp ASTERISK>;
+            key-positions = <15 16>;
+        };
+
+        z_symbAt {
+            bindings = <&kp AT_SIGN>;
+            key-positions = <21 24>;
+        };
+
+        z_symbBackslash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <9 7>;
+        };
+
+        z_symbBraceLft {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <9 6>;
+        };
+
+        z_symbBraceRgt {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <9 5>;
+        };
+
+        z_symbBracketLft {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <30 27>;
+        };
+
+        z_symbBracketRgt {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <30 26>;
+        };
+
+        z_symbCaret {
+            bindings = <&kp CARET>;
+            key-positions = <4 0>;
+        };
+
+        z_symbDollar {
+            bindings = <&kp DOLLAR>;
+            key-positions = <19 18>;
+        };
+
+        z_symbEqualPlus {
+            bindings = <&kp EQUAL>;
+            key-positions = <10 13>;
+        };
+
+        z_symbExclamation {
+            bindings = <&kp EXCLAMATION>;
+            key-positions = <3 0>;
+        };
+
+        z_symbGraveAccent {
+            bindings = <&kp GRAVE>;
+            key-positions = <0 2>;
+        };
+
+        z_symbParenthesisLft {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <16 19>;
+        };
+
+        z_symbParenthesisRgt {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <19 15>;
+        };
+
+        z_symbPipe {
+            bindings = <&kp PIPE>;
+            key-positions = <8 6>;
+        };
+
+        z_symbTilde {
+            bindings = <&kp TILDE>;
+            key-positions = <3 1>;
+        };
+
+        zz__ArwDwn {
             bindings = <&kp DOWN_ARROW>;
             key-positions = <17 18>;
         };
 
-        zz_ArwLft {
+        zz__ArwLft {
             bindings = <&kp LEFT_ARROW>;
             key-positions = <12 11>;
         };
 
-        zz_ArwRgt {
+        zz__ArwRgt {
             bindings = <&kp RIGHT_ARROW>;
             key-positions = <13 12>;
         };
 
-        zz_ArwUp {
+        zz__ArwUp {
             bindings = <&kp UP_ARROW>;
             key-positions = <17 16>;
         };
 
-        zz_End {
+        zz__End {
             bindings = <&kp END>;
             key-positions = <13 11>;
         };
 
-        zz_Home {
+        zz__Home {
             bindings = <&kp HOME>;
             key-positions = <12 10>;
         };
 
-        zzCtrArwLft {
+        zz_CtrArwLft {
             bindings = <&kp LC(LEFT_ARROW)>;
             key-positions = <16 18>;
         };
 
-        zzCtrArwRgt {
+        zz_CtrArwRgt {
             bindings = <&kp LC(RIGHT_ARROW)>;
             key-positions = <19 17>;
         };
 
-        zzMouseBtn1 {
+        zzz_mouseBtn1 {
             bindings = <&mkp MB1>;
             key-positions = <24 22>;
         };
 
-        zzMouseBtn2 {
+        zzz_mouseBtn2 {
             bindings = <&mkp MB2>;
             key-positions = <23 21>;
         };
 
-        zzMouseMovDwn {
+        zzz_mouseMovDwn {
             bindings = <&mmv MOVE_DOWN>;
             key-positions = <28 29>;
         };
 
-        zzMouseMovLft {
+        zzz_mouseMovLft {
             bindings = <&mmv MOVE_LEFT>;
             key-positions = <23 22>;
         };
 
-        zzMouseMovRgt {
+        zzz_mouseMovRgt {
             bindings = <&mmv MOVE_RIGHT>;
             key-positions = <23 24>;
         };
 
-        zzMouseMovUp {
+        zzz_mouseMovUp {
             bindings = <&mmv MOVE_UP>;
             key-positions = <27 28>;
         };
 
-        zzMsScrDn {
+        zzz_mouseScrlDwn {
             bindings = <&msc SCRL_DOWN>;
             key-positions = <30 28>;
         };
 
-        zzMsScrUp {
+        zzz_mouseScrlUp {
             bindings = <&msc SCRL_UP>;
             key-positions = <27 29>;
         };
 
-        zzzToLr0ColemakdhL {
+        zzzz_toLr0_ColemakdhL {
             bindings = <&to 0>;
             key-positions = <20 0>;
             layers = <1 2>;
         };
 
-        zzzToLr0ColemakdhR {
+        zzzz_toLr0_ColemakdhR {
             bindings = <&to 0>;
             key-positions = <31 9>;
             layers = <1 2>;
         };
 
-        zzzToLr1DigiSymbL {
+        zzzz_toLr1_DigiSymbL {
             bindings = <&to 1>;
             key-positions = <20 10>;
             layers = <0>;
         };
 
-        zzzToLr1DigiSymbR {
+        zzzz_toLr1_DigiSymbR {
             bindings = <&to 1>;
             key-positions = <31 19>;
             layers = <0>;
         };
 
-        zzzToLr2SysL_Ttm {
+        zzzz_toLr2_SysL_Ttm {
             bindings = <&to 2>;
             key-positions = <20 21>;
         };
 
-        zzzToLr2SysR_Ttm {
+        zzzz_toLr2_SysR_Ttm {
             bindings = <&to 2>;
             key-positions = <30 31>;
         };
