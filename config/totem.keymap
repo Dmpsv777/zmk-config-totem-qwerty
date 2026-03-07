@@ -406,10 +406,10 @@
         digits {
             label = "Digits";
             bindings = <
-        &none      &kp AMPS       &kp CARET  &kp DOLLAR  &none     &kp HASH     &kp NUMBER_7  &kp NUMBER_8  &kp N9        &trans
-        &kp GRAVE  &kp BACKSLASH  &none      &none       &none     &kp PERCENT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PERIOD
-&trans  &kp TILDE  &kp PIPE       &none      &none       &none     &kp N0       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans      &kp COMMA
-                                  &trans     &trans      &trans    &trans       &trans        &trans
+           &none       &kp KP_N9  &kp KP_N8  &kp KP_N7  &kp HASH       &kp HASH     &kp NUMBER_7  &kp NUMBER_8  &kp N9        &trans
+           &kp PERIOD  &kp KP_N6  &kp KP_N5  &kp KP_N4  &kp PERCENT    &kp PERCENT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PERIOD
+&kp COMMA  &none       &kp KP_N3  &kp KP_N2  &kp KP_N1  &kp KP_N0      &kp N0       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans      &kp COMMA
+                                  &trans     &trans     &trans         &trans       &trans        &trans
             >;
         };
 
