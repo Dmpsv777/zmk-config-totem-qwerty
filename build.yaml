@@ -1,3 +1,6 @@
+env:
+  CACHE_VERSION: v2
+
 include:
   - board: seeeduino_xiao_ble
     shield: totem_left
