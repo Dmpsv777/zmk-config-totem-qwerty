@@ -91,8 +91,8 @@
             key-positions = <25 24>;
         };
 
-        ctrSlashR {
-            bindings = <&kp LC(SLASH)>;
+        zs_MinusUnderscore {
+            bindings = <&kp MINUS>;
             key-positions = <26 27>;
         };
 
@@ -131,87 +131,87 @@
             key-positions = <8 9>;
         };
 
-        z_symbAmpersand {
+        zs_Ampersand {
             bindings = <&kp AMPERSAND>;
             key-positions = <10 14>;
         };
 
-        z_symbAsterisk {
+        zs_Asterisk {
             bindings = <&kp ASTERISK>;
             key-positions = <15 16>;
         };
 
-        z_symbAt {
+        zs_At {
             bindings = <&kp AT_SIGN>;
             key-positions = <21 24>;
         };
 
-        z_symbBackslash {
+        zs_BackSlash {
             bindings = <&kp BACKSLASH>;
             key-positions = <9 7>;
         };
 
-        z_symbBraceLft {
+        zs_BraceOpen {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <9 6>;
         };
 
-        z_symbBraceRgt {
+        zs_BraceClose {
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <9 5>;
         };
 
-        z_symbBracketLft {
+        zs_BracketOpen {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <30 27>;
         };
 
-        z_symbBracketRgt {
+        zs_BracketClose {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <30 26>;
         };
 
-        z_symbCaret {
+        zs_Caret {
             bindings = <&kp CARET>;
             key-positions = <4 0>;
         };
 
-        z_symbDollar {
+        zs_Dollar {
             bindings = <&kp DOLLAR>;
             key-positions = <19 18>;
         };
 
-        z_symbEqualPlus {
+        zs_EqualPlus {
             bindings = <&kp EQUAL>;
             key-positions = <10 13>;
         };
 
-        z_symbExclamation {
+        zs_Exclamation {
             bindings = <&kp EXCLAMATION>;
             key-positions = <3 0>;
         };
 
-        z_symbGraveAccent {
+        zs_BackTick {
             bindings = <&kp GRAVE>;
             key-positions = <0 2>;
         };
 
-        z_symbParenthesisLft {
+        zs_ParenthesisOpen {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <16 19>;
         };
 
-        z_symbParenthesisRgt {
+        zs_ParenthesisClose {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <19 15>;
         };
 
-        z_symbPipe {
+        zs_Pipe {
             bindings = <&kp PIPE>;
             key-positions = <8 6>;
         };
 
-        z_symbTilde {
+        zs_Tilde {
             bindings = <&kp TILDE>;
             key-positions = <3 1>;
         };
@@ -328,6 +328,11 @@
         zzzz_toLr2_SysR_Ttm {
             bindings = <&to 2>;
             key-positions = <30 31>;
+        };
+
+        zs_Plus {
+            bindings = <&kp PLUS>;
+            key-positions = <5 6>;
         };
     };
 
