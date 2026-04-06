@@ -1,11 +1,1 @@
-name: ZMK Build
 
-on:
-  push:
-  pull_request:
-
-jobs:
-  build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-    with:
-      config_path: config
