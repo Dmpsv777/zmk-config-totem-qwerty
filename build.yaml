@@ -9,8 +9,3 @@ jobs:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
     with:
       config_path: config
-      build_matrix:
-        - board: "seeeduino_xiao_ble//zmk"
-          shield: totem_left
-        - board: "seeeduino_xiao_ble//zmk"
-          shield: totem_right
